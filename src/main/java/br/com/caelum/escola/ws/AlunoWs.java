@@ -2,7 +2,6 @@ package br.com.caelum.escola.ws;
 
 
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 
@@ -22,7 +21,7 @@ public class AlunoWs {
 	@WebResult(name = "alunos", targetNamespace = "")
 	public ListaAlunos findAll(){
 		ListaAlunos listaAlunos = new ListaAlunos();
-		listaAlunos.setAluno( this.repository.findAll());
+		listaAlunos.setAluno(this.repository.findAll());
 		return listaAlunos;
 	}
 	
